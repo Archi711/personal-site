@@ -1,0 +1,53 @@
+/* no tailwind here, but this will probably change */
+
+
+@font-face {
+  font-family: 'InstrumentSans';
+  src: url('/fonts/InstrumentSans-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'InstrumentSans';
+  src: url('/fonts/InstrumentSans-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'InstrumentSerif';
+  src: url('/fonts/InstrumentSerif-Regular.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'InstrumentSerif';
+  src: url('/fonts/InstrumentSerif-Italic.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+}
+
+
+body {
+  @apply font-sans bg-stone-800 text-stone-200 flex flex-col min-h-svh;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(1em);
+    filter: blur(2px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
