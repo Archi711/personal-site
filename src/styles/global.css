@@ -1,5 +1,10 @@
-/* no tailwind here, but this will probably change */
+@import "tailwindcss";
 
+@theme {
+  --color-test: #21caff;
+  --font-sans: 'InstrumentSans', sans-serif;
+  --font-serif: 'InstrumentSerif', serif;
+}
 
 @font-face {
   font-family: 'InstrumentSans';

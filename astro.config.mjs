@@ -1,11 +1,13 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-import tailwind from '@astrojs/tailwind';
-
-import mdx from '@astrojs/mdx';
+import mdx from "@astrojs/mdx";
+import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), mdx()]
+	vite: {
+		plugins: [tailwindcss()],
+	},
+	integrations: [mdx()],
 });
