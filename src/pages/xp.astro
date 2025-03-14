@@ -1,0 +1,81 @@
+---
+import "xp.css";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Archi's corner | Home">
+  <div class="flex items-center justify-center flex-1 relative overflow-hidden">
+    <section class="window block absolute">
+      <header class="title-bar">
+        <div class="title-bar-text">Properties</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </header>
+      <div class="window-body">
+        <div>
+          <p class="font-bold">Hi. I'm Arek.</p>
+          <p>And this is my personal site.</p>
+          <p>It's a work in progress.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<script>
+  import { animate } from "motion";
+  const isHTMLElement = (node: unknown) => node instanceof HTMLElement;
+  function main() {
+    const mainWindow = document.querySelector("section.window");
+    const closeBtn = document.querySelector(
+      ".title-bar-controls button[aria-label='Close']",
+    );
+    const maximizeBtn = document.querySelector(
+      ".title-bar-controls button[aria-label='Maximize']",
+    );
+    const minimizeBtn = document.querySelector(
+      ".title-bar-controls button[aria-label='Minimize']",
+    );
+    if (
+      !isHTMLElement(mainWindow) ||
+      !isHTMLElement(closeBtn) ||
+      !isHTMLElement(maximizeBtn) ||
+      !isHTMLElement(minimizeBtn)
+    ) {
+      alert("WHAT");
+      return;
+    }
+    minimizeBtn.addEventListener("click", () => {
+      animate(
+        mainWindow,
+        {
+          x: [0, "-25vw"],
+          y: [0, "100vh"],
+          scale: [1, 0],
+        },
+        {
+          duration: 0.175,
+        },
+      ).speed = minimizeBtn.dataset.toggled ? -1 : 1;
+    });
+    maximizeBtn.addEventListener("click", () => {
+      maximizeBtn.dataset.toggled = !maximizeBtn.dataset.toggled + "";
+      animate(
+        mainWindow,
+        {
+          width: ["auto", "100%"],
+          height: ["auto", "100%"],
+        },
+        { duration: 0.075 },
+      ).speed = !maximizeBtn.dataset.toggled ? -1 : 1;
+    });
+    closeBtn.addEventListener("click", async () => {
+      await animate(mainWindow, { opacity: [1, 0] }, { duration: 0 });
+      mainWindow.remove();
+    });
+  }
+  main();
+</script>

@@ -1,46 +1,18 @@
+@import url("./fonts.css");
 @import "tailwindcss";
+/* @plugin "@tailwindcss/typography"; */
 
 @theme {
   --color-test: #21caff;
-  --font-sans: 'InstrumentSans', sans-serif;
-  --font-serif: 'InstrumentSerif', serif;
+  --font-instrument-sans: 'InstrumentSans', sans-serif;
+  --font-instrument-serif: 'InstrumentSerif', serif;
 }
 
-@font-face {
-  font-family: 'InstrumentSans';
-  src: url('/fonts/InstrumentSans-VariableFont_wdth,wght.ttf') format('truetype');
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'InstrumentSans';
-  src: url('/fonts/InstrumentSans-Italic-VariableFont_wdth,wght.ttf') format('truetype');
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'InstrumentSerif';
-  src: url('/fonts/InstrumentSerif-Regular.ttf') format('truetype');
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'InstrumentSerif';
-  src: url('/fonts/InstrumentSerif-Italic.ttf') format('truetype');
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: italic;
-}
 
 
 body {
-  @apply font-sans bg-stone-800 text-stone-200 flex flex-col min-h-svh;
+  @apply flex flex-col min-h-svh;
 }
 
 @keyframes appear {

@@ -1,0 +1,44 @@
+/* They take so much space */
+/* (thanks postcss, of whatever0 */
+@font-face {
+  font-family: 'InstrumentSans';
+  src: url('/fonts/InstrumentSans-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'InstrumentSans';
+  src: url('/fonts/InstrumentSans-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'InstrumentSerif';
+  src: url('/fonts/InstrumentSerif-Regular.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'InstrumentSerif';
+  src: url('/fonts/InstrumentSerif-Italic.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Pixelated MS Sans Serif";
+  src: url('../../node_modules/xp.css/dist/ms_sans_serif.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: "Pixelated MS Sans Serif";
+  src: url('../../node_modules/xp.css/dist/ms_sans_serif_bold.woff2') format('woff2');
+  font-weight: bold;
+}
