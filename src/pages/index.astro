@@ -1,5 +1,15 @@
 ---
+import AppHeader from "@/components/features/AppHeader.astro";
+import Layout from "@/layouts/Layout.astro";
+
 // as I plan to make more versions of this site
 ---
 
-<meta http-equiv="Refresh" content="0; URL=/xp" />
+<!-- <meta http-equiv="Refresh" content="0; URL=/xp" /> -->
+<Layout title="Archi's | Home">
+  <Fragment slot="head">
+    <meta name="description" content="Oh I don't know what to write here." />
+  </Fragment>
+  <AppHeader />
+  <main>Hmmm</main>
+</Layout>

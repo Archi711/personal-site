@@ -1,0 +1,40 @@
+---
+import WID from "@/assets/what-is-dat.svg";
+import AppHeader from "@/components/features/AppHeader.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="This is not the page you're looking for | Archi's">
+  <AppHeader />
+  <main class="py-24 flex flex-col items-center justify-center gap-4">
+    <WID class="absolute top-0 left-0 size-0" />
+    <div
+      class="[clip-path:url(#WID)] bg-gradient-to-b from-amber-400 to-violet-800 w-screen absolute top-0 left-0 h-screen"
+    >
+    </div>
+    <header class="text-center">
+      <h1 class="italic">For some reason this page does not exist.</h1>
+      <p class="mt-4">
+        Sometimes the reason is simpler than you might think.
+        <br />Maybe I just haven’t made it <span
+          class="text-transparent font-bold bg-clip-text bg-gradient-to-b from-amber-400 to-sky-500"
+          >yet</span
+        >.
+      </p>
+    </header>
+    <p
+      class="text-[20vh] font-instrument-serif text-stone-950 text-shadow-sm text-shadow-stone-800"
+    >
+      404
+    </p>
+    <div>
+      <p>There's really nothing to see here.</p>
+      <a
+        href="/"
+        class="transition hover:text-stone-50 font-instrument-serif text-4xl"
+      >
+        Go away
+      </a>
+    </div>
+  </main>
+</Layout>

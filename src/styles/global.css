@@ -9,11 +9,13 @@
 }
 
 
-
-
-body {
-  @apply flex flex-col min-h-svh;
+@layer base {
+  body {
+    @apply bg-stone-900 text-stone-300 antialiased font-instrument-sans;
+  }
 }
+
+
 
 @keyframes appear {
   0% {

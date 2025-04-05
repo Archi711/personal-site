@@ -1,0 +1,77 @@
+---
+import { navData } from "@/data/nav";
+---
+
+<header
+  class="sticky border-b border-stone-700 top-0 z-35 flex items-center justify-between w-full p-4"
+>
+  <nav class="bg-stone-100/10 px-4 py-2 backdrop-blur-2xl rounded-full">
+    <a href="/" class="p-2 size-12">
+      <span class="font-instrument-serif text-4xl">A</span>
+      <span class="sr-only">Home page</span>
+    </a>
+  </nav>
+  <nav
+    data-nav
+    class="bg-stone-100/5 overflow-clip relative backdrop-blur-2xl rounded-full"
+  >
+    <div class="absolute -top-8 left-0 bg-amber-300 h-4 w-1/2 z-0 blur-xl">
+    </div>
+    <span
+      class="flex pointer-events-none shadow-inner shadow-sky-400/5 rounded-full h-full w-0 bg-stone-100/5 absolute top-0 left-0"
+    ></span>
+    {
+      navData.map((item) => (
+        <a
+          href={item.href}
+          class="px-6 hover:text-stone-50 text-sm uppercase tracking-tighter font-extralight rounded-full py-2 inline-flex shrink-0"
+        >
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+</header>
+
+<script>
+  import { dqsl, dqsla } from "@/lib/utils";
+  import { animate } from "motion";
+  function main() {
+    const nav = dqsl("[data-nav]");
+    if (!nav) return;
+    const navItems = dqsla("[data-nav] a");
+    const indicator = nav.querySelector("span");
+    if (!indicator) return;
+    nav.addEventListener("mouseleave", () => {
+      animate(
+        indicator,
+        {
+          scale: 0,
+        },
+        {
+          duration: 0.25,
+          type: "spring",
+          bounce: 0.1,
+        },
+      );
+    });
+    for (const a of navItems) {
+      a.addEventListener("mouseenter", () => {
+        animate(
+          indicator,
+          {
+            x: a.offsetLeft,
+            scale: 1,
+            width: a.offsetWidth,
+          },
+          {
+            duration: 0.25,
+            type: "spring",
+            bounce: 0.1,
+          },
+        );
+      });
+    }
+  }
+  main();
+</script>

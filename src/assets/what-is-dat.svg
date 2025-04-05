@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 282 248">
+  <path stroke="currentColor" d="M1 246V136C95 127 188-38 281 9v58C243.05 45.55 193 84 1 246Z" />
+  <defs>
+    <clipPath id="WID" clipPathUnits="objectBoundingBox">
+      <path d="M1 246V136C95 127 188-38 281 9v58C243.05 45.55 193 84 1 246Z" />
+    </clipPath>
+  </defs>
+</svg>
