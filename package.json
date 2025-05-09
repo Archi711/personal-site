@@ -9,12 +9,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "4.2.3",
+    "@astrojs/mdx": "4.2.6",
     "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.1.2",
-    "astro": "5.6.1",
-    "motion": "^12.6.3",
-    "tailwindcss": "^4.1.2",
+    "@tailwindcss/vite": "^4.1.6",
+    "astro": "5.7.12",
+    "motion": "^12.10.5",
+    "tailwindcss": "^4.1.6",
     "xp.css": "^0.2.6"
-  }
+  },
+  "trustedDependencies": [
+    "@tailwindcss/oxide"
+  ]
 }
