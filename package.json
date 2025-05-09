@@ -6,7 +6,10 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "clean": "bun run ./scripts/clean.ts",
+    "lint:check": "bun prettier . --check && bun biome check",
+    "lint:fix": "bun prettier . --write && bun biome check --fix"
   },
   "dependencies": {
     "@astrojs/mdx": "4.2.6",
@@ -17,7 +20,11 @@
     "tailwindcss": "^4.1.6",
     "xp.css": "^0.2.6"
   },
-  "trustedDependencies": [
-    "@tailwindcss/oxide"
-  ]
+  "trustedDependencies": ["@tailwindcss/oxide"],
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/bun": "^1.2.12",
+    "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1"
+  }
 }

@@ -4,18 +4,15 @@
 
 @theme {
   --color-test: #21caff;
-  --font-instrument-sans: 'InstrumentSans', sans-serif;
-  --font-instrument-serif: 'InstrumentSerif', serif;
+  --font-instrument-sans: "InstrumentSans", sans-serif;
+  --font-instrument-serif: "InstrumentSerif", serif;
 }
-
 
 @layer base {
   body {
     @apply bg-stone-900 text-stone-300 antialiased font-instrument-sans;
   }
 }
-
-
 
 @keyframes appear {
   0% {

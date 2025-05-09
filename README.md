@@ -6,5 +6,5 @@ This is a personal website built using Astro and Tailwind CSS. It showcases my w
 
 - **Astro** ❤️
 - **Tailwind CSS** ❤️
-- **Responsive Design**: *only if I won't forget*
+- **Responsive Design**: _only if I won't forget_
 - **MDX Support**: I'll use it - promise.
