@@ -14,16 +14,16 @@
   "dependencies": {
     "@astrojs/mdx": "4.2.6",
     "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.1.6",
+    "@tailwindcss/vite": "^4.1.7",
     "astro": "5.7.12",
-    "motion": "^12.10.5",
-    "tailwindcss": "^4.1.6",
+    "motion": "^12.12.1",
+    "tailwindcss": "^4.1.7",
     "xp.css": "^0.2.6"
   },
   "trustedDependencies": ["@tailwindcss/oxide"],
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@types/bun": "^1.2.12",
+    "@types/bun": "^1.2.13",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1"
   }
