@@ -15,12 +15,12 @@
     "@astrojs/mdx": "4.2.6",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.7",
-    "astro": "5.7.12",
+    "astro": "5.7.13",
     "motion": "^12.12.1",
     "tailwindcss": "^4.1.7",
     "xp.css": "^0.2.6"
   },
-  "trustedDependencies": ["@tailwindcss/oxide"],
+  "trustedDependencies": ["@biomejs/biome", "@tailwindcss/oxide", "esbuild", "sharp"],
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@types/bun": "^1.2.13",
