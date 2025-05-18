@@ -1,10 +1,16 @@
 ---
 import WID from "@/assets/what-is-dat.svg";
 import AppHeader from "@/components/features/AppHeader.astro";
+import Head from "@/layouts/Head.astro";
 import Layout from "@/layouts/Layout.astro";
 ---
 
-<Layout title="This is not the page you're looking for | Archi's">
+<Layout>
+  <Head
+    slot="head"
+    title="This is not the page you are looking for | Archi's"
+    description="404"
+  />
   <AppHeader />
   <main class="py-24 flex flex-col items-center justify-center gap-4">
     <WID class="absolute top-0 left-0 size-0" />

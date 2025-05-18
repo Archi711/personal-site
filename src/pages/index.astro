@@ -1,15 +1,21 @@
 ---
 import AppHeader from "@/components/features/AppHeader.astro";
+import AboutMeStuff from "@/content/_unstructured/about.md";
+import Head from "@/layouts/Head.astro";
 import Layout from "@/layouts/Layout.astro";
-
-// as I plan to make more versions of this site
 ---
 
 <!-- <meta http-equiv="Refresh" content="0; URL=/xp" /> -->
-<Layout title="Archi's | Home">
-  <Fragment slot="head">
-    <meta name="description" content="Oh I don't know what to write here." />
-  </Fragment>
+<Layout>
+  <Head
+    slot="head"
+    title="About me | Archi's"
+    description="Hi, my name is Arek. I'm a fullstack dev, designer - all the good stuff"
+  />
   <AppHeader />
-  <main>Hmmm</main>
+  <main>
+    <article class="py-8 mx-auto prose px-rws max-w-4xl text-balance">
+      <AboutMeStuff />
+    </article>
+  </main>
 </Layout>

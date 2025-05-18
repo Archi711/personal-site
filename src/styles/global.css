@@ -1,29 +1,29 @@
-@import url("./fonts.css");
 @import "tailwindcss";
 /* @plugin "@tailwindcss/typography"; */
 
 @theme {
-  --color-test: #21caff;
-  --font-instrument-sans: "InstrumentSans", sans-serif;
-  --font-instrument-serif: "InstrumentSerif", serif;
+  --font-instrument-serif: "Instrument Serif", serif;
+  --font-atkinson-hyperlegible: "Atkinson Hyperlegible", sans-serif;
 }
 
 @layer base {
   body {
-    @apply bg-stone-900 text-stone-300 antialiased font-instrument-sans;
+    @apply bg-stone-900 text-stone-300 antialiased font-atkinson-hyperlegible;
   }
 }
 
-@keyframes appear {
-  0% {
-    opacity: 0;
-    transform: scale(0.95) translateY(1em);
-    filter: blur(2px);
-  }
+@utility px-rws {
+  @apply px-4 md:px-6 lg:px-12 2xl:px-16;
+}
 
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-    filter: blur(0);
+@layer components {
+  .prose {
+    h1 {
+      @apply lg:text-4xl text-2xl font-instrument-serif mb-4;
+    }
+
+    em {
+      @apply text-stone-400 my-1 inline-flex;
+    }
   }
 }
