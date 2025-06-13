@@ -4,11 +4,17 @@
 @theme {
   --font-instrument-serif: "Instrument Serif", serif;
   --font-atkinson-hyperlegible: "Atkinson Hyperlegible", sans-serif;
+
+  --color-foreground: var(--color-stone-200);
+  --color-background: var(--color-stone-900);
+
+  --color-muted: var(--color-stone-800);
+  --color-muted-foreground: var(--color-stone-500);
 }
 
 @layer base {
   body {
-    @apply bg-stone-900 text-stone-300 antialiased font-atkinson-hyperlegible;
+    @apply text-foreground/65 bg-background antialiased font-atkinson-hyperlegible;
   }
 }
 
@@ -19,11 +25,11 @@
 @layer components {
   .prose {
     h1 {
-      @apply lg:text-4xl text-2xl font-instrument-serif mb-4;
+      @apply lg:text-4xl text-2xl text-foreground font-instrument-serif my-4;
     }
 
     em {
-      @apply text-stone-400 my-1 inline-flex;
+      @apply my-2 inline-flex text-sm;
     }
   }
 }

@@ -14,7 +14,11 @@ import Layout from "@/layouts/Layout.astro";
   />
   <AppHeader />
   <main>
-    <article class="py-8 mx-auto prose px-rws max-w-4xl text-balance">
+    <article
+      class:list={[
+        "py-8 mx-auto prose px-rws max-w-[65ch] starting:blur-lg transition starting:opacity-0 duration-700 ",
+        "starting:scale-90 starting:translate-y-12",
+      ]}>
       <AboutMeStuff />
     </article>
   </main>

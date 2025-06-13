@@ -1,5 +1,6 @@
 ---
 import { Font } from "astro:assets";
+import { ClientRouter } from "astro:transitions";
 
 export interface Props {
   title: string;
@@ -50,4 +51,5 @@ const canonical = Astro.site
   <!-- Fonts -->
   <Font cssVariable="--font-instrument-serif" />
   <Font cssVariable="--font-atkinson-hyperlegible" />
+  <ClientRouter />
 </head>
