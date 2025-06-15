@@ -4,7 +4,7 @@ import { navData } from "@/data/nav";
 
 <header
   class:list={[
-    "sticky border-b border-stone-800 bg-stone-800/50 top-0 z-35",
+    "fixed border-b border-stone-800 bg-stone-800/50 -top-20 z-35",
     "flex items-center h-20 justify-between w-full px-rws",
   ]}>
   <nav class="">
@@ -44,6 +44,17 @@ import { navData } from "@/data/nav";
     const navItems = dqsla("[data-nav] a");
     const indicator = nav.querySelector("span");
     if (!indicator) return;
+    animate(
+      nav.parentElement!,
+      {
+        y: "80px",
+      },
+      {
+        type: "tween",
+        duration: 0.4,
+        delay: 0.7,
+      },
+    );
     nav.addEventListener("mouseleave", () => {
       animate(
         indicator,
