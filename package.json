@@ -13,18 +13,18 @@
   },
   "dependencies": {
     "@astrojs/mdx": "4.2.6",
-    "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.1.7",
+    "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/vite": "^4.3.3",
     "astro": "5.7.13",
-    "motion": "^12.12.1",
-    "tailwindcss": "^4.1.7",
+    "motion": "^12.43.0",
+    "tailwindcss": "^4.3.3",
     "xp.css": "^0.2.6"
   },
   "trustedDependencies": ["@biomejs/biome", "@tailwindcss/oxide", "esbuild", "sharp"],
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@types/bun": "^1.2.13",
-    "prettier": "^3.5.3",
+    "@types/bun": "^1.4.0",
+    "prettier": "^3.9.6",
     "prettier-plugin-astro": "^0.14.1"
   }
 }
