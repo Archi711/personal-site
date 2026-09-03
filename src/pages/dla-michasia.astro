@@ -1,6 +1,17 @@
 ---
 import Head from "@/layouts/Head.astro";
 import Layout from "@/layouts/Layout.astro";
+
+import { formatDuration, intervalToDuration } from "date-fns";
+import { pl } from "date-fns/locale";
+
+const dateTo = new Date(2026, 8, 7, 16, 0, 0);
+
+const est = intervalToDuration({ end: dateTo, start: Date.now() });
+const dur = formatDuration(est, { locale: pl });
+const lines = dur.match(/\d+\s+\p{L}+/gu);
+if (!lines) return;
+const start = lines.join("<br/>");
 ---
 
 <Layout>
@@ -10,9 +21,34 @@ import Layout from "@/layouts/Layout.astro";
     description="Nie interesuj się!"
     robots="noindex, nofollow"
   />
-  <div class="min-h-screen flex flex-col items-center justify-center gap-4">
+  <div
+    class="min-h-screen text-center p-8 flex flex-col items-center justify-center gap-4">
     <p class="font-serif text-5xl">Wszystkiego najlepszego!!</p>
     <p class="text-xl">Na razie nic tu nie ma.</p>
-    <p class="text-4xl">Ale niedługo będzie!</p>
+    <p class="text-xl">Ale za...</p>
+    <p class="text-2xl lg:text-4xl">
+      <span
+        class="text-transparent bg-clip-text tabular-nums font-mono bg-linear-0 from-lime-400 to-indigo-400"
+        data-countdown
+        set:html={start}
+      />
+    </p>
+    <p class="text-xl">Będzie!</p>
   </div>
 </Layout>
+
+<script>
+  import { formatDuration, intervalToDuration } from "date-fns";
+  import { pl } from "date-fns/locale";
+  const target = document.querySelector<HTMLSpanElement>("[data-countdown]")!;
+  const dateTo = new Date(2026, 8, 7, 16, 0, 0);
+  setInterval(() => {
+    const est = intervalToDuration({ end: dateTo, start: Date.now() });
+
+    const dur = formatDuration(est, { locale: pl });
+    const lines = dur.match(/\d+\s+\p{L}+/gu);
+    if (!lines) return;
+    const start = lines.join("<br/>");
+    target.innerHTML = start;
+  }, 1000);
+</script>
