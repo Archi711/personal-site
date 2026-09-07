@@ -1,9 +1,10 @@
 ---
 import Head from "@/layouts/Head.astro";
 import Layout from "@/layouts/Layout.astro";
-
+import QRImg from "@/assets/qr.jpeg";
 import { formatDuration, intervalToDuration } from "date-fns";
 import { pl } from "date-fns/locale";
+import { Image } from "astro:assets";
 
 const dateTo = new Date(2026, 8, 7, 16, 0, 0);
 
@@ -24,16 +25,7 @@ const start = lines.join("<br/>");
   <div
     class="min-h-screen text-center p-8 flex flex-col items-center justify-center gap-4">
     <p class="font-serif text-5xl">Wszystkiego najlepszego!!</p>
-    <p class="text-xl">Na razie nic tu nie ma.</p>
-    <p class="text-xl">Ale za...</p>
-    <p class="text-2xl lg:text-4xl">
-      <span
-        class="text-transparent bg-clip-text tabular-nums font-mono bg-linear-0 from-lime-400 to-indigo-400"
-        data-countdown
-        set:html={start}
-      />
-    </p>
-    <p class="text-xl">Będzie!</p>
+    <Image src={QRImg} alt="QREK" />
   </div>
 </Layout>
 
